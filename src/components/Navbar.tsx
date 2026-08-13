@@ -1,24 +1,3 @@
-// import { Link } from 'react-router-dom'
-
-// export default function Navbar() {
-//   return (
-//     <nav className="bg-black text-white px-6 py-4 flex items-center justify-between">
-//       <Link to="/" className="font-bold text-lg text-[#C9A24B]">
-//         AQOC
-//       </Link>
-//       <div className="flex gap-6">
-//         <Link to="/" className="hover:text-[#C9A24B]">Home</Link>
-//         <Link to="/programs" className="hover:text-[#C9A24B]">Programs</Link>
-//         <Link to="/about" className="hover:text-[#C9A24B]">About</Link>
-//         <Link to="/register" className="hover:text-[#C9A24B]">Register</Link>
-//         <Link to="/contact" className="hover:text-[#C9A24B]">Contact</Link>
-//       </div>
-//     </nav>
-//   )
-// }
-
-
-
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
@@ -30,19 +9,16 @@ export default function Navbar() {
     { to: '/', label: 'Home' },
     { to: '/programs', label: 'Programs' },
     { to: '/about', label: 'About' },
-    { to: '/register', label: 'Register' },
-    { to: '/contact', label: 'Contact' },
   ]
 
   return (
-    <nav className="bg-black text-white px-6 py-4 relative">
+    <nav className="bg-black text-white px-6 md:px-12 py-4 relative">
       <div className="flex items-center justify-between">
-        <Link to="/" className="font-bold text-lg text-[#C9A24B]" onClick={() => setIsOpen(false)}>
-          AQOC
+        <Link to="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
+          <span className="font-bold text-lg text-[#C9A24B] font-display text-xl ">AQOC</span>
         </Link>
 
-        {/* Desktop links */}
-        <div className="hidden md:flex gap-6">
+        <div className="hidden md:flex gap-15 absolute left-[47%] -translate-x-1/2">
           {navLinks.map((link) => (
             <Link key={link.to} to={link.to} className="hover:text-[#C9A24B]">
               {link.label}
@@ -50,7 +26,21 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Hamburger button - mobile only */}
+        <div className="hidden md:flex gap-4 ml-auto mr-5">
+          <Link
+            to="/register"
+            className="bg-[#C9A24B] text-black px-5 py-2 rounded-full font-medium hover:bg-[#b8923f] transition"
+          >
+            Register
+          </Link>
+          <Link
+            to="/contact"
+            className="bg-white text-black px-5 py-2 rounded-full font-medium hover:bg-gray-200 transition"
+          >
+            Contact
+          </Link>
+        </div>
+
         <button
           className="md:hidden"
           onClick={() => setIsOpen(!isOpen)}
@@ -60,19 +50,27 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile dropdown menu */}
       {isOpen && (
         <div className="md:hidden flex flex-col gap-4 mt-4 pb-2">
           {navLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className="hover:text-[#C9A24B]"
-              onClick={() => setIsOpen(false)}
-            >
+            <Link key={link.to} to={link.to} className="hover:text-[#C9A24B]" onClick={() => setIsOpen(false)}>
               {link.label}
             </Link>
           ))}
+          <Link
+            to="/register"
+            className="bg-[#C9A24B] text-black px-5 py-2 rounded-full font-medium text-center"
+            onClick={() => setIsOpen(false)}
+          >
+            Register
+          </Link>
+          <Link
+            to="/contact"
+            className="bg-white text-black px-5 py-2 rounded-full font-medium text-center"
+            onClick={() => setIsOpen(false)}
+          >
+            Contact
+          </Link>
         </div>
       )}
     </nav>

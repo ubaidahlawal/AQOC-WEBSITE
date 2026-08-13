@@ -6,15 +6,14 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white px-6 py-10">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Brand */}
+
         <div>
-          <h3 className="text-[#C9A24B] font-bold text-lg mb-2">AQOC</h3>
+          <h3 className="text-[#C9A24B] font-bold text-lg mb-2 font-display">AQOC</h3>
           <p className="text-sm text-gray-300">
             Alhusmany Qur'aanic Online Class — Eradicating Qur'anic Illiteracy.
           </p>
         </div>
 
-        {/* Quick Links */}
         <div>
           <h4 className="font-semibold mb-3">Quick Links</h4>
           <ul className="space-y-2 text-sm text-gray-300">
@@ -26,7 +25,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Contact */}
         <div>
           <h4 className="font-semibold mb-3">Contact Us</h4>
           <ul className="space-y-3 text-sm text-gray-300">
