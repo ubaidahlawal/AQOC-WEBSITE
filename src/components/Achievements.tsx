@@ -62,16 +62,16 @@ export default function Achievements() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto px-6 sm:px-0">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-3xl mx-auto px-6 sm:px-0">
           <img
             src={cert1}
             alt="AQOC certificate of completion sample"
-            className="rounded-xl shadow-md border border-gray-200 max-w-xs mx-auto sm:max-w-none sm:w-full"
+            className="rounded-xl shadow-md border border-gray-200 max-w-sm sm:w-full w-full h-auto"
           />
           <img
             src={cert2}
             alt="AQOC certificate of completion sample"
-            className="rounded-xl shadow-md border border-gray-200 max-w-xs mx-auto sm:max-w-none sm:w-full"
+            className="rounded-xl shadow-md border border-gray-200 max-w-sm sm:w-full h-auto w-full"
           />
         </div>
         <div className="text-center mt-8">

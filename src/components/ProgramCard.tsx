@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import type { Course } from '../data/program'
 
 interface ProgramCardProps {
@@ -69,12 +70,12 @@ export default function ProgramCard({ course }: ProgramCardProps) {
             Not Yet Available
           </button>
         ) : (
-          <a
-            href="/register"
+          <Link
+            to="/register"
             className="block text-center w-full bg-[#C9A24B] text-black py-2 rounded-full font-semibold hover:bg-[#b8923f] transition"
           >
             Register Now
-          </a>
+          </Link>
         )}
       </div>
     </div>

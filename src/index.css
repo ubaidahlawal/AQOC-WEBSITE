@@ -4,6 +4,10 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 .font-display {
   font-family: 'Playfair Display', serif;
 }
