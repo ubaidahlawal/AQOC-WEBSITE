@@ -29,14 +29,14 @@ export default function Contact() {
           </a>
 
           <a
-            href="mailto:aqoc2020@gmail.com"
+            href="mailto:alhusmany2020@gmail.com"
             className="bg-gray-50 border border-gray-200 rounded-2xl p-8 text-center hover:shadow-md hover:border-[#C9A24B]/50 transition flex flex-col items-center"
           >
             <div className="w-14 h-14 rounded-full bg-[#C9A24B]/10 flex items-center justify-center mb-4">
               <Mail className="text-[#C9A24B]" size={28} />
             </div>
             <h3 className="font-display font-bold text-black mb-1">Email</h3>
-            <p className="text-sm text-gray-600">aqoc2020@gmail.com</p>
+            <p className="text-sm text-gray-600">alhusmany2020@gmail.com</p>
           </a>
 
           <a
