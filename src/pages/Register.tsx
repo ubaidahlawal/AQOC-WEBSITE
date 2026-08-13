@@ -60,8 +60,7 @@ export default function Register() {
 
       await fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data as any).toString(),
+        body: data,
       })
 
       setSubmitted(true)
