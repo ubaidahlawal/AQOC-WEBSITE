@@ -4,6 +4,7 @@ import cert3 from '../assets/cert-4.jpeg'
 import cert4 from '../assets/cert-3.jpeg'
 import cert5 from '../assets/cert-5.jpeg'
 import cert6 from '../assets/cert-8.jpeg'
+import DirectorSection from '../components/DirectorSection'
 
 const certificates = [cert1, cert2, cert3, cert4, cert5, cert6]
 
@@ -16,7 +17,7 @@ export default function About() {
           About <span className="text-[#C9A24B]">AQOC</span>
         </h1>
         <p className="text-gray-300 max-w-2xl mx-auto">
-          Learn more about our mission, our journey, and the students we've had
+          Learn more about our mission, our journey, our Director, and the students we've had
           the honor of teaching.
         </p>
       </div>
@@ -29,7 +30,7 @@ export default function About() {
           </h2>
           <p className="text-gray-700">
             To be the trusted online home where Muslim children and adults begin,
-            grow, and excel in their Qur'anic journey.
+            grow, and excel in their Qur'anic and Islamic journey.
           </p>
         </div>
         <div className='border border-gray-200 rounded-2xl p-8 flex flex-col justify-center
@@ -76,6 +77,8 @@ export default function About() {
           </p>
         </div>
       </div>
+
+      <DirectorSection/>
 
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="text-center mb-10">

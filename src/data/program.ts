@@ -200,17 +200,27 @@ export interface PricingOption {
         },
       ],
     },
+
     {
-      id: 'adults',
-      name: 'AQOC Adults',
-      courses: [
-        {
-          name: 'AQOC Adults',
-          description:
-            "A comprehensive Islamic education program for adults (18+), mirroring the AQOC Kiddies curriculum.",
-          pricing: [],
-          status: 'coming-soon',
-        },
-      ],
-    },
+        id: 'adults',
+        name: 'AQOC Adults',
+        courses: [
+          {
+            name: 'AQOC Adults',
+            description:
+              "Islamic education for adults age 18+, covering Qur'an recitation and memorization, Hadith, Adhkaar, and general Islamic knowledge.",
+            duration: 'Minimum 3 years',
+            schedule: 'Live one-on-one sessions via Telegram, Google Meet, or WhatsApp',
+            pricing: [
+              {
+                type: 'Termly',
+                amount: '₦200,000',
+                unit: 'per term, per student',
+                note: '1 term = 4 months (≈ ₦50,000/month per student)',
+              },
+            ],
+            status: 'open',
+          },
+        ],
+      },
   ]
